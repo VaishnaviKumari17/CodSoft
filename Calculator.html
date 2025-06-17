@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator - Task 3</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .buttons input {
+      width: 60px;
+      padding: 10px;
+      margin: 5px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons input:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter 1st number">
+    <input type="number" id="num2" placeholder="Enter 2nd number">
+
+    <div class="buttons">
+      <input type="button" value="+" onclick="calculate('+')">
+      <input type="button" value="-" onclick="calculate('-')">
+      <input type="button" value="" onclick="calculate('')">
+      <input type="button" value="/" onclick="calculate('/')">
+    </div>
+
+    <div id="result">Result: </div>
+  </div>
+
+  <script>
+    function calculate(operator) {
+      let n1 = parseFloat(document.getElementById('num1').value);
+      let n2 = parseFloat(document.getElementById('num2').value);
+      let result;
+
+      if (isNaN(n1) || isNaN(n2)) {
+        result = 'Please enter valid numbers.';
+      } else {
+        switch (operator) {
+          case '+':
+            result = n1 + n2;
+            break;
+          case '-':
+            result = n1 - n2;
+            break;
+          case '*':
+            result = n1 * n2;
+            break;
+          case '/':
+            result = n2 !== 0 ? (n1 / n2).toFixed(2) : 'Cannot divide by zero';
+            break;
+          default:
+            result = 'Invalid operation';
+        }
+      }
+
+      document.getElementById('result').innerText = 'Result: ' + result;
+    }
+  </script>
+
+</body>
+</html>
