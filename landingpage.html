@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Digital Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+    }
+
+    .top-bar {
+      background: #f45ca5;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 30px;
+      font-size: 14px;
+    }
+
+    .navbar {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #f45ca5;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0a') center/cover no-repeat;
+      color: white;
+      padding: 100px 30px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn, .btn-outline {
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn {
+      background: #ff4c97;
+      color: white;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      background: linear-gradient(to right, #fba92c, #f44583);
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .feature-box {
+      text-align: center;
+      font-size: 1.1rem;
+      flex: 1;
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about .text {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 30px;
+    }
+
+    .about .image img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .services {
+      background: #f7f7f7;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 30px;
+    }
+
+    .service-grid {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-box {
+      background: white;
+      padding: 20px;
+      width: 30%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+      min-width: 250px;
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .features, .service-grid, .about {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-box {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="contact-info">
+       ‪+1-234-567-8910‬ &nbsp; agency@email.com
+    </div>
+    <div class="cta-button">
+      <a href="#contact" class="btn">Request a Consult</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">LANDING PAGE</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Creative Digital Agency</h1>
+    <p>We bring your vision to life with stunning design & strategy.</p>
+    <a href="#" class="btn">Read More</a>
+    <a href="#" class="btn-outline">Request a Consult</a>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box">Launch Business</div>
+    <div class="feature-box"> Online Support</div>
+    <div class="feature-box">Time Management</div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about">
+    <div class="text">
+      <h2>About Us</h2>
+      <p>15 years of excellence in digital solutions. Helping clients grow globally through smart design, online visibility, and digital strategy.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" alt="About Us">
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-box"> User Experience</div>
+      <div class="service-box">Creative Design</div>
+      <div class="service-box">Retina Ready</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Creative Digital Agency. All rights reserved.
+  </footer>
+
+</body>
+</html>
